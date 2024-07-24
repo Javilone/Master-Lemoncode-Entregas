@@ -1,0 +1,28 @@
+$color-1: orangered;
+$color-2: cornflowerblue;
+$color-3: green;
+$text-color-effect: gray;
+
+@mixin flex-aligned {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin lighten-darken($color) {
+    $light-value: 1;
+    $dark-value: 4;
+
+    @while $light-value <= 4 and $dark-value >= 1 {
+        .lighten-#{$light-value}{
+                background-color: lighten($color, $light-value * 10%);
+                color: $text-color-effect;
+        }
+        .darken-#{$dark-value}{
+            background-color: darken($color, $dark-value * 10%);
+            color: $text-color-effect;
+        }
+        $light-value: $light-value + 1;
+        $dark-value: $dark-value - 1;
+    }
+}

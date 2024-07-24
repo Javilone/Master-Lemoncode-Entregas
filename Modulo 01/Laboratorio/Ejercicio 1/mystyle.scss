@@ -1,0 +1,57 @@
+@use "base" as *;
+
+body {
+  @include flex-aligned;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+[class*=container] {
+  @include flex-aligned;
+  width: 100%;
+
+  .box {
+    @include flex-aligned;
+    margin: 5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+  }
+
+  .base-color {
+    width: 100px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.color-box-text {
+  text-align: center;
+}
+
+.container-1 {
+  .box{
+    background-color: $color-1;
+  }
+
+  @include lighten-darken($color-1);
+}
+
+.container-2 {
+  .box{
+    background-color: $color-2;
+  }
+
+  @include lighten-darken($color-2);
+}
+
+.container-3 {
+  .box{
+    background-color: $color-3;
+  }
+
+  @include lighten-darken($color-3);
+}

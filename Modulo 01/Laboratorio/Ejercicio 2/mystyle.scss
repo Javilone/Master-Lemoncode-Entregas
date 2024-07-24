@@ -1,0 +1,64 @@
+// @use "theme01" as *;
+@use "theme02" as *;
+
+body {
+  @include flex-aligned;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box-1 {
+  @include box-base;
+  background-color: $bg-color-1;
+  font-family: $font-1-family;
+  font-weight: $font-1-weight;
+  padding: $box-padding;
+}
+
+.box-2 {
+  @include box-base;
+  background-color: $bg-color-2;
+  font-family: $font-1-family;
+  font-weight: $font-1-weight;
+  padding: $box-padding;
+}
+
+.box-3 {
+  @include box-base;
+  background-color: $bg-color-3;
+  font-family: $font-1-family;
+  font-weight: $font-1-weight;
+  padding: $box-padding;
+}
+
+.box-4 {
+  @include box-base;
+  padding: $box-padding;
+  align-content: space-around;
+  line-height: 250%;
+  border: none;
+}
+
+.text-1{
+  font-family: $font-2-family;
+  font-weight: $font-2-weight;
+}
+
+.text-2{
+  font-family: $font-1-family;
+  font-weight: $font-1-weight;
+}
+
+.box-5 {
+  @include box-base;
+  background-color: $bg-color-5;
+  font-family: $font-1-family;
+  font-weight: $font-1-weight;
+  font-size: $font-1-size;
+  padding: $box-padding;
+  border: 1px solid black;
+  box-shadow: $box-shadow;
+}

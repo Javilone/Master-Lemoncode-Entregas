@@ -1,0 +1,53 @@
+$background-color: #141414;
+
+$font-family: "Jost", sans-serif;
+$font-hlogo-size: 22px;
+$font-hbuttons-size: 18px;
+
+$font-size-desktop: 18px;
+$font-size-responsive-1: 20px;
+$font-size-responsive-2: 22px;
+
+$grid-desktop-columns: 5;
+$grid-responsive-columns: 3;
+
+
+
+@mixin normalize {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@mixin img-scaling {
+    transform: scale(1.3);
+    cursor: pointer;
+    transition: 1s;
+}
+
+@mixin image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-flow:row;
+
+    img{
+        min-width: 250px;
+        width: 100%;
+        object-fit: cover;
+        transition: 1s;
+
+        &:hover{
+            @include img-scaling;
+        }
+    }
+}

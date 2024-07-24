@@ -1,0 +1,89 @@
+@use "base" as *;
+
+/* Código en reserva si se introducen más cards
+
+body {
+  display: grid;
+  grid-auto-flow: column;
+  margin: 40px;
+  gap: 40px;
+}
+  
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: saturate(1.5);
+  }
+}
+
+.content {
+  border: 1px solid rgb(150, 150, 150);
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 1fr;
+  padding: 20px;
+}
+
+.title, .text, .date-row, .more-info {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: calc(1vw + 0.4rem) 0;
+}
+
+.title {
+  font-family: $font-title-family;
+  font-size: $font-title-size;
+  font-weight: $font-title-weight;
+}
+
+.text {
+  font-family: $font-text-family;
+  font-size: $font-text-size;
+  font-weight: $font-text-weigth;
+  line-height: $font-text-line-height;
+}
+
+.date-row {
+  font-family: $font-date-family;
+  font-size: $font-date-size;
+  font-weight: $font-date-weigth;
+  text-align: right;
+
+  .publish {
+    font-weight: 400;
+  }
+
+  .date{
+    color: rgb(125, 191, 125);
+  }
+}
+
+.more-info {
+  font-family: $font-more-info-family;
+  font-size: $font-more-info-size;
+  font-weight: $font-more-info-weight;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(78, 180, 47, 0.848);
+
+  &:hover {
+    background-color: blueviolet;
+  }
+}

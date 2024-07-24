@@ -1,0 +1,14 @@
+// COLOR
+$bg-color-primary: rgb(0, 124, 131);
+$bg-color-secondary: rgb(0, 55, 58);
+// FONT
+$font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$font-title-size: 28px;
+// SIZE
+$desktop: 690px;
+
+@mixin flex-aligned {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

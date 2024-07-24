@@ -1,0 +1,29 @@
+$bg-color-1: red;
+$bg-color-2: darkred;
+$bg-color-3: lightpink;
+$bg-color-5: white;
+
+$font-1-family: 'Courier New', Courier, monospace;
+$font-1-weight: bold;
+$font-1-size: 18px;
+$font-2-family: Arial, Helvetica, sans-serif;
+$font-2-weight: normal;
+
+$box-padding: 20px 20px;
+
+$box-shadow: -9px 9px 10px 0px;
+
+@mixin box-base {
+    width: 140px;
+    height: 90px;
+    text-align: left;
+    border-radius: 15px;
+    margin: 1px 0;
+    border: 1px solid black;
+}
+
+@mixin flex-aligned {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
