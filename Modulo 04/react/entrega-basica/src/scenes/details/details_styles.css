@@ -1,0 +1,33 @@
+.detail-member-container {
+  width: 50%;
+  margin: 24px auto;
+  text-align: center;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2vw;
+
+  border: 12px solid white;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.detail-member-container a {
+  font-weight: bold;
+  font-size: 1.2vw;
+  padding: 8px;
+  text-decoration: none;
+  color: #343a40;
+}
+
+.detail-member-container a:hover {
+  background-color: #00c9a7;
+  color: white;
+  border: white;
+  border-radius: 12px;
+}
+
+.detail-member-container img {
+  width: 300px;
+  border: 2px solid #343a40;
+  border-radius: 12px;
+}
