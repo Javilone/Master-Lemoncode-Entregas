@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import "../details/details_styles.css";
+import "./git_details_styles.css";
 
 interface MemberDetailEntity {
   id: string;

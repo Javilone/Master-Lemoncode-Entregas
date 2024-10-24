@@ -12,7 +12,7 @@ export const InitPage: React.FC = () => {
         <a href="/github_members">
           <img src="/images/person.svg" className="image-option" />
         </a>
-        <a href="/list">
+        <a href="/rick">
           <img src="/images/rickymorty.jpg" className="image-option" />
         </a>
         <p>BUSCAR ORGANIZACIONES @GitHub</p>

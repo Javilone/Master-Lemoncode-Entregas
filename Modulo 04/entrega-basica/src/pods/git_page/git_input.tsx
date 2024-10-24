@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useInputContext } from "../../core/context/github_page_context/github_context";
+import { useInputContext } from "../../core/context/git_context/github_context";
 
 const InputComponent: React.FC = () => {
   const { inputValue, setInputValue } = useInputContext();
@@ -13,7 +13,7 @@ const InputComponent: React.FC = () => {
 
   useEffect(() => {
     setInput(inputValue);
-  }, [inputValue]);
+  }, [setInputValue]);
 
   return (
     <div>

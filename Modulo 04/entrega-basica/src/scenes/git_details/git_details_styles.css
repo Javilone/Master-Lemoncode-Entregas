@@ -13,10 +13,12 @@
 
 .detail-member-container a {
   font-weight: bold;
-  font-size: 1.2vw;
+  font-size: 1.9vw;
   padding: 8px;
   text-decoration: none;
-  color: #343a40;
+  color: #969696;
+  border: 0.3px solid #969696;
+  border-radius: 12px;
 }
 
 .detail-member-container a:hover {
