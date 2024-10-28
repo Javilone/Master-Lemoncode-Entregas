@@ -4,6 +4,7 @@
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   color: #f3f3f3;
+  height: 100vh;
 }
 
 .init-global h1 {

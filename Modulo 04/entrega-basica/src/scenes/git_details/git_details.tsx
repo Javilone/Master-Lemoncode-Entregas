@@ -55,7 +55,7 @@ export const DetailPage: React.FC = () => {
           </p>
         </>
       ) : (
-        <h1>Loading member</h1>
+        <h1>CARGANDO MIEMBRO</h1>
       )}{" "}
     </div>
   );

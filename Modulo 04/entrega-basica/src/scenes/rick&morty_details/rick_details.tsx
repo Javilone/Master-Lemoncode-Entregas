@@ -52,7 +52,7 @@ export const DetailRickMorty: React.FC = () => {
           </p>
         </>
       ) : (
-        <h1>Loading member</h1>
+        <h1>CARGANDO PERSONAJE</h1>
       )}{" "}
     </div>
   );

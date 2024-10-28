@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useInputContext } from "../../core/context/git_context/github_context";
 import { useDebounce } from "../../common-app/useDebounce";
+
+import UserList from "./git_users_list";
 
 interface MemberEntity {
   id: string;
@@ -11,38 +12,23 @@ interface MemberEntity {
 
 export const GitSearch: React.FC = () => {
   const { inputValue } = useInputContext();
-  const debouncedInputValue = useDebounce(inputValue, 200); // Si hay búsqueda automática, ajustar el tiempo a 1000
+  /* Actualmente no ejecuta la búsqueda automática.
+  Si se activa: Ajustar el tiempo a 1000.
+  Para activarla ir al módulo git_input.tsx y descomentar línea 11 */
+  const debouncedInputValue = useDebounce(inputValue, 200);
 
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
 
+  // TODO Agregar manejo de errores if (!response.ok) {throw new Error("")}
   React.useEffect(() => {
     if (debouncedInputValue) {
       fetch(`https://api.github.com/orgs/${debouncedInputValue}/members`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`La API "${debouncedInputValue}" no existe`);
-          }
-          return response.json();
-        })
-        .then(setMembers)
-        .catch((error) => console.error(error));
+        .then((response) => response.json())
+        .then(setMembers);
     } else {
       setMembers([]);
     }
   }, [debouncedInputValue]);
 
-  return (
-    <div className="list-user-list-container">
-      <div className="list-header">Avatar</div>
-      <div className="list-header">Id</div>
-      <div className="list-header">Nombre</div>
-      {members.map((member) => (
-        <React.Fragment key={member.login}>
-          <img src={member.avatar_url} alt={`${member.login}'s avatar`} />
-          <span>{member.id}</span>
-          <Link to={`/detail/${member.login}`}>{member.login}</Link>
-        </React.Fragment>
-      ))}
-    </div>
-  );
+  return <UserList members={members} />;
 };
