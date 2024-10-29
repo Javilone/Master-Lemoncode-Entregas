@@ -46,9 +46,10 @@
 .page-buttons {
   font-weight: bold;
   margin: 4px;
-  width: 40px;
+  width: 55px;
   height: 40px;
   transition: 0.5s all ease-in-out;
+  text-align: center;
 }
 
 .page-buttons:hover {
