@@ -20,8 +20,10 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        use: {
+          loader: "babel-loader",
+        },
         exclude: /node_modules/,
-        loader: "babel-loader",
       },
       {
         test: /\.(png|jpg)$/,
@@ -49,10 +51,9 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    //Generate index.html in /dist => https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: "index.html", //Name of file in ./dist/
-      template: "index.html", //Name of template in ./src
+      filename: "index.html",
+      template: "index.html",
     }),
   ],
 };
